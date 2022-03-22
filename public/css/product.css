@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.product {
+    padding: 10px;
+    background-color: #fff;
+    position: relative
+}
+
+.about h4 {
+    margin-bottom: -3px
+}
+
+.about h3 {
+    color: #e3ce57
+}
+
+.about span {
+    font-size: 13px
+}
+
+.dot {
+    height: 40px;
+    width: 40px;
+    background-color: #e3ce57;
+    border-radius: 50%;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    right: 10%;
+    z-index: 10;
+    bottom: -5%
+}
+
+.inner-dot {
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer
+}
+
+.btn-outline-dark:hover {
+    color: #ffffff;
+    background-color:rgb(0, 0, 0);
+    border-color: rgb(174, 3, 253);
+    border-radius: 50px;
+}
+
+.card {
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background: transparent;
+    height:270px; 
+    width:270px; 
+    padding:10px; 
+    margin-top:5px; 
+    margin-bottom:30px;
+    /* border: 1px solid rgb(76 66 66 / 20%); */
+}
+
+img {
+    height:100%; 
+    width:100%;
+}
+
+.text-center {
+    width: 150px; 
+    height:150px
+}
+
+.usermargin{
+    margin-left: 80px; 
+}
+
+.usermargin1{
+    margin-left: 150px; 
+}
+
+
+.fixed-top
+{
+    background-color: rgba(0, 0, 0, 0.312);
+}
+
+

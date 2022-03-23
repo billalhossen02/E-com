@@ -27,3 +27,4 @@ Route::get('allProduct',[ApiController::class, 'allProduct']);
 
 
 Route::post('addCategory',[ApiController::class, 'addCategory']);
+

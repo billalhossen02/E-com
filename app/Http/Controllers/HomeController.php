@@ -127,6 +127,12 @@ class HomeController extends Controller
 
     }
 
+    public function getCategory()
+    {
+        $categories = Http::get('https://devapi.cinebaz.com/api/v2/getCategory')->body();
+        return view('test',['categories' => $categories]);
+    }
+
   
 
 

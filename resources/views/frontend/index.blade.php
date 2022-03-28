@@ -13,12 +13,13 @@
 <div>
     @include('frontend.slider')
 </div>
- 
 
 <div>
-
     @include('frontend.products')
+</div>
 
+<div>
+    @include('frontend.banner')
 </div>
 
 @endsection

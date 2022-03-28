@@ -18,15 +18,22 @@ class CategoryController extends Controller
     }
     public function addcategory(Request $request)
     {
+        $image =$request->file('image');
+        $ext = date('Ymdhis'). '.'.$image->getClientOriginalExtension();
+        $dest = 'Category';
+        $image->move($dest, $ext);
+
         $data = new Category ();
         $data->name = $request->name;
+        $data->image = $ext;
         $data->save();
         return back(); 
     }
     public function categorydelete($id)
     {
-
+        
         $data = Category::find($id)->delete();
+        return back();
 
     }
 

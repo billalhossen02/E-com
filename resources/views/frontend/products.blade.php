@@ -1,13 +1,16 @@
 <link rel="stylesheet" href="css/product.css">
-<link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-<h1 style="text-align:center"> Features Product </h1>
 
-<div class="container mt-5">
-    <div class="d-flex justify-content-between align-items-center mb-3"> <span>Hottest Giveaways</span> <span class="custom-badge text-uppercase">See More</span> </div>
+        <h3 style="text-align:left" class="pt-10">Top Trendings Category</h3>
+                <div class="owl-theme owl-carousel posi">
+                    @foreach($categories as $category)
+                    <div class="item"><img class="img" src="{{asset('Category/'.$category->image)}}" alt=""><h5><span class="title">{{$category->name }}</span></h5></div>
+                    @endforeach
+                </div>
+            
+<h3 style="text-align:center" class="pt-10"> Features Product </h3>
+
+<div class="container">
     <div class="row">
-
-
         @foreach($products as $product)
         <div class="col-md-3">
             <div class="card">
@@ -31,5 +34,9 @@
             </div>
         </div>
     @endforeach
+
+       
+        
     </div>
 </div>
+

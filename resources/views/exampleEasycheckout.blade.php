@@ -63,7 +63,8 @@
         </div>
         <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Billing address</h4>
-            <form method="POST" class="needs-validation" action="{{route('paymentcheck')}}" enctype="multipart/form-data">
+            <form method="post" action="{{url('pay')}}" enctype="multipart/form-data">
+                @csrf
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label for="firstName">Full name</label>
@@ -153,12 +154,7 @@
                     <label class="custom-control-label" for="save-info">Save this information for next time</label>
                 </div>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" id="sslczPayBtn"
-                        token="if you have any token validation"
-                        postdata="your javascript arrays or objects which requires in backend"
-                        order="If you already have the transaction generated for current order"
-                        type="submit"
-                        endpoint="{{ url('/pay-via-ajax') }}"> Pay Now
+                <button class="btn btn-primary" type="submit"> Make Payment
                 </button>
             </form>
         </div>

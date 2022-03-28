@@ -20,6 +20,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Action</th>
                     </tr>
                     </thead>
@@ -30,6 +31,7 @@
                     <tr>    
                         <td>{{ $i++ }}</td>
                         <td>{{$category->name}}</td>
+                        <td><img style="height: 60px; width: 70px" src="{{asset('Category/'.$category->image)}}" alt=""></td>
                         <td><a href="{{url('category/delete/'.$category->id)}}"><button class="btn btn-danger"><span class="la la-trash"></span></button></a></td>
                     </tr>
 
@@ -47,6 +49,12 @@
                 <label for="exampleInputEmail1">Name</label>
                 <input type="text" name="name" class="form-control" id="exampleInputEmail1"  placeholder="Name">
               </div>
+
+              <div class="form-group">
+                <label for="exampleInputEmail1">Image</label>
+                <input type="file" name="image" class="form-control" id="exampleInputEmail1">
+              </div>
+
            <button name="submit" class="btn btn-primary">Add Category</button>
           </form>
 

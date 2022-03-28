@@ -25,16 +25,14 @@ class HomeController extends Controller
     }
 
 
-    public function readdata()
+    // public function readdata()
     
-    {
+    // {
        
+    //     $products = Product::latest()->paginate();
+    //     return view('frontend.products',compact('products'));
 
-        $products = Product::latest()->paginate();
-        return view('frontend.products',compact('products'));
-       
-
-    }
+    // }
 
     public function showproduct($id)
     {
@@ -101,18 +99,31 @@ class HomeController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
+
+        // $email = $request->email;
+        // $password = $request->password;
+
+        // $member = DB::table('members')->where('email', $email )->where('password', $password)->first();
    
 
         $checkLogin = $request->only('email', 'password');
 
-        if(Auth::attempt($checkLogin)) {
-            return view('dashboard');
+        if(Auth::attempt($checkLogin)){
+            return redirect()->route('home');
         }
 
-        else
-        {
-        return view("frontend.login")->with(['error'=> "Invalid email or Password!!"]);
+        else{
+            return redirect()->route('custome/loginblade');
         }
+
+        // if(Auth::attempt($checkLogin)) {
+        //     return view('dashboard');
+        // }
+
+        // else
+        // {
+        // return view("frontend.login")->with(['error'=> "Invalid email or Password!!"]);
+        // }
     }
 
     public function customLogout()
@@ -125,12 +136,6 @@ class HomeController extends Controller
 
         return redirect()->back();
 
-    }
-
-    public function getCategory()
-    {
-        $categories = Http::get('https://devapi.cinebaz.com/api/v2/getCategory')->body();
-        return view('test',['categories' => $categories]);
     }
 
   

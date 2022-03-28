@@ -15,7 +15,7 @@
               <div class="flex-1">
                 <table class="w-full text-sm lg:text-base" cellspacing="0">
                   <thead>
-                    <a href="{{route('/')}}"><button class="btn btn-primary" style="float: right">Back</button></a>
+                    <a href="{{route('home')}}"><button class="btn btn-primary" style="float: right">Back</button></a>
                     <tr class="h-12 uppercase">
                       <th class="hidden md:table-cell"></th>
                       <th class="text-left">Name</th>
@@ -81,7 +81,7 @@
                      </div>
                   </form>
                    <div style="float: right">
-                      <a class="btn btn-warning" href="{{route('/')}}">Continue Shopping</a>
+                      <a class="btn btn-warning" href="{{route('home')}}">Continue Shopping</a>
                       <a class="btn btn-success" href="{{route('payment')}}">Proceed To Checkout</a> 
                      </div>
                 </div>

@@ -31,7 +31,7 @@ class CartController extends Controller
         ]);
         session()->flash('success', 'Product is Added to Cart Successfully !');
 
-        return redirect()->route('/');
+        return redirect()->route('home');
     }
 
     public function updateCart(Request $request)

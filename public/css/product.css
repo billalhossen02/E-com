@@ -95,4 +95,25 @@ img {
     background-color: rgba(0, 0, 0, 0.312);
 }
 
+.img
+{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    object-fit: cover;
+    transform: scale(0.85);
+    
 
+}
+
+.posi
+{
+    position:relative;
+
+}
+.title
+{   
+    display: block; 
+    text-align:center;
+    background: transparent;
+}

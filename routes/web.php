@@ -33,7 +33,7 @@ if(Schema::hasTable('users')){
 }
 
 
-Route::get('/',[HomeController::class, 'home'])->name('/');
+Route::get('/',[HomeController::class, 'home'])->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -43,7 +43,7 @@ Route::get('products/show/{id}',[HomeController::class,'productsshow']);
 Route::get('nav',[HomeController::class, 'nav']);
 Route::get('search',[HomeController::class, 'search'])->name('search');
 
-Route::get('login/blade',[HomeController::class, 'login']);
+Route::get('login/blade',[HomeController::class, 'login'])->name('custome/loginblade');
 Route::get('register/blade',[HomeController::class, 'register']);
 Route::post('member/store',[HomeController::class, 'memberStore'])->name('member/store');
 Route::post('custom/login',[HomeController::class, 'customLogin'])->name('custom/login');
@@ -92,4 +92,6 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
 
+
+//External API Test
 Route::get('getCategory',[HomeController::class, 'getCategory']);

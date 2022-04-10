@@ -22,4 +22,8 @@
     @include('frontend.banner')
 </div>
 
+<div>
+    @include('frontend.footer')
+</div>
+
 @endsection
